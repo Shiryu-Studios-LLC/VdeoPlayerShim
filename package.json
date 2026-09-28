@@ -1,8 +1,8 @@
 {
-  "name": "dev.architech.videoplayershim",
-  "version": "1.5.0",
-  "displayName": "ArchiTech.VideoPlayerShim",
-  "description": "An out-of-the-box utility for enabling both UnityVideo and AVProVideo playback in-editor for the VRChat SDK.",
+  "name": "org.shiryu.videoplayershim",
+  "version": "1.5.1",
+  "displayName": "Shiryu VideoPlayer Shim",
+  "description": "Shiryu Studios' maintained and modified fork of ArchiTech.VideoPlayerShim, providing UnityVideo and AVProVideo playback support in-editor for VRChat SDK projects.",
   "url": "https://github.com/Shiryu-Studios-LLC/VdeoPlayerShim",
   "unity": "2019.4",
   "unityRelease": "31f1",
@@ -13,15 +13,25 @@
     "Assets\\ArchiTech\\VideoPlayerShim": "e24998e4ae4c4761b42513fe1142a7c5"
   },
   "legacyFiles": {},
+  "legacyPackages": [
+    "dev.architech.videoplayershim"
+  ],
   "keywords": [
+    "shiryu",
+    "shiryu-studios",
     "video player",
     "unity",
+    "vrchat",
     "avpro",
     "utility"
   ],
   "author": {
-    "name": "ArchiTechVR",
-    "email": "archi@techanon.dev"
+    "name": "Shiryu Studios LLC",
+    "url": "https://github.com/Shiryu-Studios-LLC"
   },
+  "documentationUrl": "https://github.com/Shiryu-Studios-LLC/VdeoPlayerShim/blob/main/README.md",
+  "changelogUrl": "https://github.com/Shiryu-Studios-LLC/VdeoPlayerShim/blob/main/CHANGELOG.md",
+  "license": "ISC",
+  "licensesUrl": "https://github.com/Shiryu-Studios-LLC/VdeoPlayerShim/blob/main/LICENSE.md",
   "samples": []
 }

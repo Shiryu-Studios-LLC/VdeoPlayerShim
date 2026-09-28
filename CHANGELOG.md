@@ -7,6 +7,14 @@ Structure used for this document:
 - Changes
 ```
 
+## 1.5.1 (2026-09-28)
+- Rebrand the maintained fork as **Shiryu VideoPlayer Shim**.
+- Change the VPM package ID to `org.shiryu.videoplayershim`.
+- Declare `dev.architech.videoplayershim` as a legacy package so the Shiryu fork replaces the upstream package cleanly.
+- Add explicit attribution to the original ArchiTech.VideoPlayerShim project by ArchiTechVR / TechAnon.
+- Preserve the original ISC license and internal `ArchiTech.VideoPlayerShim` namespaces/assembly names for compatibility.
+- Point documentation, changelog, support, and package metadata at the Shiryu Studios maintained fork.
+
 ## 1.5.0 (2025-12-04)
 - Improve reliability of finding the correct YTDL executable via PATH env variable.
 - Add error logs for any detected error values returned from YTDL.

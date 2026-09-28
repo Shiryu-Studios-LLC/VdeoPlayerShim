@@ -1,32 +1,60 @@
-# VRChat SDK Video Player Shim
+# Shiryu VideoPlayer Shim
 
-### Demonstration video
-![AVPro Playmode Walkthrough](/uploads/4e2117eec7b640309407462ed1832960/AVPro_Playmode_Walkthrough.mp4)
+**Shiryu VideoPlayer Shim** is a Shiryu Studios LLC maintained and modified fork of **ArchiTech.VideoPlayerShim** by ArchiTechVR / TechAnon.
 
-This package contains a set of scripts which enable support for both UnityVideo and AVPro _in play mode_, including YTDL integration.
+The original project is available at https://gitlab.com/techanon/videoplayershim and the original ArchiTechVR VPM listing is available at https://vpm.techanon.dev.
 
-- Install ArchiTech.VideoPlayerShim through VCC from the [ArchiTechVR Listing](https://vpm.techanon.dev)
-- Upon importing the package, it should prompt you to automatically import the requisite AVPro version. Click agree/continue to import it.
-  - If the auto-import fails, you can download the requisite AVPro Trial package here: [UnityPlugin-AVProVideo-v2.8.5-Trial.unitypackage](https://github.com/RenderHeads/UnityPlugin-AVProVideo/releases/download/2.8.5/UnityPlugin-AVProVideo-v2.8.5-Trial.unitypackage)
-- **REMEMBER THE TRIAL PACKAGE IS REQUIRED FOR AVPRO TO WORK IN EDITOR PLAYMODE!**
+This fork keeps the original ISC license and copyright notice, while carrying Shiryu Studios-specific fixes and maintenance changes used by our VRChat projects. Internal `ArchiTech.VideoPlayerShim` namespaces and assembly names are intentionally retained for compatibility with existing scenes, components, prefabs, and scripts.
 
-### Manual AVPro Import Instructions:
-- If you don't care for AVPro support, you can simply import the VideoPlayerShim package as is.
-- If you _DO_ want AVPro support, you will need to download the same AVPro package that VRChat is currently using.  
-- Last version checked was 2.8.5, but it may be another version in the future.
-- To check the version of AVPro that VRChat is using, you will need to go into a world _**with an enabled AVPro video player**_ so the log containing the version will be written.  
-- Open the debug log ([relevant VRChat docs](https://creators.vrchat.com/worlds/udon/debugging-udon-projects/#steam-launch-options)) 
-- Look for the line that starts with `[AVProVideo] Initializing AVPro Video vX.X.X` where the X.X.X is the version that VRChat is using.
-- Download the trial unitypackage file for that version from the [RenderHeads Github](https://github.com/RenderHeads/UnityPlugin-AVProVideo/releases) ([2.8.5 for example](https://github.com/RenderHeads/UnityPlugin-AVProVideo/releases/tag/2.8.5))
-- Import that unitypackage into your project, then import the VideoPlayerShim unitypackage after it.
-- Setup your VRCAVProVideoPlayers/Speakers/Screens as desired (importing a community video player prefab will also work)
-- Press play in unity and try playing a youtube (UnityVideo and AVPro) or twitch link (AVPro only)
+## What it does
 
-That should just work. Please open an issue if you find something isn't matching up like you expect.
+This package provides editor play-mode support for both UnityVideo and AVProVideo in VRChat SDK projects, including YTDL/yt-dlp URL resolution.
 
-Special Notes:
-- If testing with VRCDN, it is recommended to use the MPEG-TS link for reliability within the editor. As always, validate in-game as appropriate.
+## Install
 
-Copyright notice:  
-A portion of the code in this package is modified logic from the AVPro Trial package in order to make it work with the VRCSDK/ClientSim.  
-All rights of the original trial version code are reserved by RenderHeads.
+Install **Shiryu VideoPlayer Shim** from the **Shiryu Studios Official Packages** VPM repository:
+
+- Repository: https://packages.shiryu.org/official?download
+- Package ID: `org.shiryu.videoplayershim`
+
+The package declares `dev.architech.videoplayershim` as a legacy package so the Shiryu fork can replace the original package rather than being installed alongside it.
+
+## AVPro editor support
+
+Upon importing the package, it should prompt you to automatically import the required AVPro version. Accept the prompt to enable AVPro playback in editor play mode.
+
+If the automatic import fails, you can install the matching AVPro Trial package manually from the RenderHeads releases page:
+https://github.com/RenderHeads/UnityPlugin-AVProVideo/releases
+
+**The AVPro Trial package is required for AVPro playback in Unity editor play mode.**
+
+### Manual AVPro setup
+
+- If you do not need AVPro support, the shim can be used without importing AVPro.
+- If you do need AVPro support, use the same AVPro version that VRChat currently uses.
+- To identify the version, run a VRChat world with an enabled AVPro player and inspect the VRChat debug log for a line beginning with `[AVProVideo] Initializing AVPro Video vX.X.X`.
+- Download the matching trial package from RenderHeads and import it into Unity.
+- Import or refresh Shiryu VideoPlayer Shim afterward.
+- Configure your `VRCAVProVideoPlayer`, speakers, and screens as normal.
+- Enter Play Mode and test a supported URL.
+
+## Compatibility and attribution
+
+This is **not the original upstream ArchiTech release**. It is a modified fork maintained by Shiryu Studios LLC.
+
+Original project:
+- **ArchiTech.VideoPlayerShim**
+- Original author: **ArchiTechVR / TechAnon**
+- Upstream source: https://gitlab.com/techanon/videoplayershim
+- Original VPM listing: https://vpm.techanon.dev
+
+Shiryu Studios maintains this fork and is responsible for the modifications distributed from this repository. The original ISC copyright and permission notice remain in `LICENSE.md`.
+
+A portion of the code in the package is based on modified logic from the AVPro Trial package so that it works with the VRChat SDK / ClientSim. Rights in the original AVPro Trial code remain with RenderHeads.
+
+## Support
+
+For issues specific to the Shiryu-maintained fork, use this repository:
+https://github.com/Shiryu-Studios-LLC/VdeoPlayerShim
+
+For behavior specific to the original ArchiTech project, consult the upstream project linked above.
