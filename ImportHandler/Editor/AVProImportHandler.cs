@@ -23,7 +23,7 @@ namespace ArchiTech.VideoPlayerShim.ImportHandler
         private const string scriptingDefineSymbolV3 = "AVPRO_V3";
         private const string doAVProImportPromptKey = "VideoPlayerShim-DoAVProImport";
         private const string skipAVProDefineChecks = "VideoPlayerShim-SkipAVProDefineChecks";
-        private const string importAVProMenu = "Tools/VideoPlayerShim/Import AVPro";
+        private const string importAVProMenu = "Tools/Shiryu Studios/VideoPlayerShim/Import AVPro";
 
         private static bool _hasCheckedDefines = false;
         private static readonly Regex versionPattern = new Regex("public +const +string +AVProVideoVersion *= *\"([a-zA-Z0-9_.]+)\";");

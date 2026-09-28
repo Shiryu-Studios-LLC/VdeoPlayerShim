@@ -54,13 +54,13 @@ namespace ArchiTech.VideoPlayerShim
             {
                 if (File.Exists(customPath))
                 {
-                    UnityEngine.Debug.Log($"[VideoPlayerShim] Custom YTDL location found: {customPath}");
+                    UnityEngine.Debug.Log($"[Shiryu.VideoPlayerShim] Custom YTDL location found: {customPath}");
                     SetupCallbacks();
                     return customPath;
                 }
 
-                UnityEngine.Debug.LogWarning($"[VideoPlayerShim] Custom YTDL location found but does not exist: {customPath}");
-                UnityEngine.Debug.Log("[VideoPlayerShim] Checking other locations...");
+                UnityEngine.Debug.LogWarning($"[Shiryu.VideoPlayerShim] Custom YTDL location found but does not exist: {customPath}");
+                UnityEngine.Debug.Log("[Shiryu.VideoPlayerShim] Checking other locations...");
             }
 
 #if UNITY_EDITOR_WIN
@@ -76,7 +76,7 @@ namespace ArchiTech.VideoPlayerShim
                 : null;
             if (!string.IsNullOrEmpty(fullYTDLPath))
             {
-                UnityEngine.Debug.Log($"[VideoPlayerShim] Full editor YTDL location found: {fullYTDLPath}");
+                UnityEngine.Debug.Log($"[Shiryu.VideoPlayerShim] Full editor YTDL location found: {fullYTDLPath}");
                 return fullYTDLPath;
             }
 
@@ -87,7 +87,7 @@ namespace ArchiTech.VideoPlayerShim
             {
                 if (pattern.IsMatch(file))
                 {
-                    UnityEngine.Debug.Log($"[VideoPlayerShim] Default YTDL location found: {file}");
+                    UnityEngine.Debug.Log($"[Shiryu.VideoPlayerShim] Default YTDL location found: {file}");
                     SetupCallbacks();
                     return file;
                 }
@@ -143,8 +143,8 @@ namespace ArchiTech.VideoPlayerShim
             }
 
             var info = string.IsNullOrEmpty(resolved)
-                ? $"[VideoPlayerShim] Unable to find YTDL location in the PATH."
-                : $"[VideoPlayerShim] YTDL location found in PATH: {resolved}";
+                ? $"[Shiryu.VideoPlayerShim] Unable to find YTDL location in the PATH."
+                : $"[Shiryu.VideoPlayerShim] YTDL location found in PATH: {resolved}";
             UnityEngine.Debug.Log(info);
             return resolved ?? ""; // don't ever return null
         }
@@ -227,8 +227,8 @@ namespace ArchiTech.VideoPlayerShim
             ytdlProcess.StartInfo.Arguments = $"--no-check-certificates --no-cache-dir --rm-cache-dir --js-runtimes node --remote-components ejs:github --extractor-args \"youtube:player_client=web_embedded\" -f \"mp4[height<=?{resolution}]/best[height<=?{resolution}]\" --get-url \"{url}\"";
 
             Debug.Log($"[<color=#9C6994>Video Playback</color>] Attempting to resolve URL '{url}'");
-            Debug.Log($"[VideoPlayerShim] Resolver executable: {youtubeDLPath}");
-            Debug.Log($"[VideoPlayerShim] Resolver arguments: {ytdlProcess.StartInfo.Arguments}");
+            Debug.Log($"[Shiryu.VideoPlayerShim] Resolver executable: {youtubeDLPath}");
+            Debug.Log($"[Shiryu.VideoPlayerShim] Resolver arguments: {ytdlProcess.StartInfo.Arguments}");
 
             ytdlProcess.Start();
             runningYTDLProcesses.Add(ytdlProcess);
@@ -287,7 +287,7 @@ namespace ArchiTech.VideoPlayerShim
             }
 
             if (!foundError && line.StartsWith("https://"))
-                Debug.Log($"[VideoPlayerShim] Resolved media URL: {line}");
+                Debug.Log($"[Shiryu.VideoPlayerShim] Resolved media URL: {line}");
 
             // Valid URL was found
             if (!string.IsNullOrWhiteSpace(line))

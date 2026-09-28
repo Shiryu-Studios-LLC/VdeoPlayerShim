@@ -1,7 +1,7 @@
 {
   "name": "org.shiryu.videoplayershim",
-  "version": "1.5.1",
-  "displayName": "Shiryu VideoPlayer Shim",
+  "version": "1.5.2",
+  "displayName": "Shiryu.VideoPlayerShim",
   "description": "Shiryu Studios' maintained and modified fork of ArchiTech.VideoPlayerShim, providing UnityVideo and AVProVideo playback support in-editor for VRChat SDK projects.",
   "url": "https://github.com/Shiryu-Studios-LLC/VdeoPlayerShim",
   "unity": "2019.4",

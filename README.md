@@ -1,6 +1,6 @@
-# Shiryu VideoPlayer Shim
+# Shiryu.VideoPlayerShim
 
-**Shiryu VideoPlayer Shim** is a Shiryu Studios LLC maintained and modified fork of **ArchiTech.VideoPlayerShim** by ArchiTechVR / TechAnon.
+**Shiryu.VideoPlayerShim** is a Shiryu Studios LLC maintained and modified fork of **ArchiTech.VideoPlayerShim** by ArchiTechVR / TechAnon.
 
 The original project is available at https://gitlab.com/techanon/videoplayershim and the original ArchiTechVR VPM listing is available at https://vpm.techanon.dev.
 
@@ -12,7 +12,7 @@ This package provides editor play-mode support for both UnityVideo and AVProVide
 
 ## Install
 
-Install **Shiryu VideoPlayer Shim** from the **Shiryu Studios Official Packages** VPM repository:
+Install **Shiryu.VideoPlayerShim** from the **Shiryu Studios Official Packages** VPM repository:
 
 - Repository: https://packages.shiryu.org/official?download
 - Package ID: `org.shiryu.videoplayershim`
@@ -34,7 +34,7 @@ https://github.com/RenderHeads/UnityPlugin-AVProVideo/releases
 - If you do need AVPro support, use the same AVPro version that VRChat currently uses.
 - To identify the version, run a VRChat world with an enabled AVPro player and inspect the VRChat debug log for a line beginning with `[AVProVideo] Initializing AVPro Video vX.X.X`.
 - Download the matching trial package from RenderHeads and import it into Unity.
-- Import or refresh Shiryu VideoPlayer Shim afterward.
+- Import or refresh Shiryu.VideoPlayerShim afterward.
 - Configure your `VRCAVProVideoPlayer`, speakers, and screens as normal.
 - Enter Play Mode and test a supported URL.
 

@@ -1,4 +1,4 @@
-# VideoPlayerShim Changelog
+# Shiryu.VideoPlayerShim Changelog
 Manually curated document of all notable changes to this project sorted by version number in descending order.
 
 Structure used for this document:
@@ -6,6 +6,12 @@ Structure used for this document:
 ## Version Number (Publish Date)
 - Changes
 ```
+
+## 1.5.2 (2026-09-28)
+- Standardize the public package name as **Shiryu.VideoPlayerShim**.
+- Move Unity editor menu entries under `Tools/Shiryu Studios/VideoPlayerShim`.
+- Rebrand editor resolver log prefixes to `[Shiryu.VideoPlayerShim]`.
+- Keep legacy `ArchiTech.VideoPlayerShim` namespaces and assembly names internally for compatibility.
 
 ## 1.5.1 (2026-09-28)
 - Rebrand the maintained fork as **Shiryu VideoPlayer Shim**.

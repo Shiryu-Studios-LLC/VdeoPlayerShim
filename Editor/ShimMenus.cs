@@ -6,8 +6,8 @@ namespace ArchiTech.VideoPlayerShim
 {
     public static class ShimMenus
     {
-        internal const string userDefinedYTDLPathMenu = "Tools/VideoPlayerShim/Select Custom YTDL Install";
-        internal const string forceVideoErrorMenu = "Tools/VideoPlayerShim/Force Video Error/";
+        internal const string userDefinedYTDLPathMenu = "Tools/Shiryu Studios/VideoPlayerShim/Select Custom YTDL Install";
+        internal const string forceVideoErrorMenu = "Tools/Shiryu Studios/VideoPlayerShim/Force Video Error/";
 
         [MenuItem(userDefinedYTDLPathMenu, priority = 1)]
         private static void SelectYTDLInstall()
